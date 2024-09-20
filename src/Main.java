@@ -102,6 +102,9 @@ public class Main {
         } else if (buttons[2].getText().equals(buttons[4].getText())
             && buttons[4].getText().equals(buttons[6].getText()) && !buttons[2].getText().isEmpty()) {
           JOptionPane.showMessageDialog(null, buttons[2].getText() + " Wins Game Over");
+        } else if (counter > 9) {
+          JOptionPane.showMessageDialog(null, "It's a Tie");
+
         }
       }
     };
