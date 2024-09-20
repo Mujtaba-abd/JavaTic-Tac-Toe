@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class Main {
 
@@ -50,38 +51,54 @@ public class Main {
     Frame.add(b9);
 
     ActionListener buttonListener = new ActionListener() {
-      int counter = 0;
+      int counter = 1;
+
+      boolean gameOver = false;
 
       public void actionPerformed(ActionEvent ae) {
         JButton button = (JButton) ae.getSource();
-        if (counter == 0) {
+        if (counter % 2 == 1) {
           button.setText("X");
-        }
-        if (counter == 1) {
+        } else {
           button.setText("O");
-        }
-        if (counter == 2) {
-          button.setText("X");
-        }
-        if (counter == 3) {
-          button.setText("O");
-        }
-        if (counter == 4) {
-          button.setText("X");
-        }
-        if (counter == 5) {
-          button.setText("O");
-        }
-        if (counter == 6) {
-          button.setText("X");
-        }
-        if (counter == 7) {
-          button.setText("O");
-        }
-        if (counter == 8) {
-          button.setText("X");
         }
         counter++;
+
+        if (gameOver == false) {
+          if (buttons[0].getText().equals(buttons[1].getText())
+              && buttons[1].getText().equals(buttons[2].getText()) && !buttons[0].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
+          } else if (buttons[3].getText().equals(buttons[4].getText())
+              && buttons[4].getText().equals(buttons[5].getText()) && !buttons[3].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[3].getText() + " Wins Game Over");
+          } else if (buttons[6].getText().equals(buttons[7].getText())
+              && buttons[7].getText().equals(buttons[8].getText()) && !buttons[6].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[6].getText() + " Wins Game Over");
+          } else if (buttons[0].getText().equals(buttons[3].getText())
+              && buttons[3].getText().equals(buttons[6].getText()) && !buttons[0].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
+          } else if (buttons[1].getText().equals(buttons[4].getText())
+              && buttons[4].getText().equals(buttons[7].getText()) && !buttons[1].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[1].getText() + " Wins Game Over");
+          } else if (buttons[2].getText().equals(buttons[5].getText())
+              && buttons[5].getText().equals(buttons[8].getText()) && !buttons[2].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[2].getText() + " Wins Game Over");
+          } else if (buttons[0].getText().equals(buttons[4].getText())
+              && buttons[4].getText().equals(buttons[8].getText()) && !buttons[0].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
+          } else if (buttons[2].getText().equals(buttons[4].getText())
+              && buttons[4].getText().equals(buttons[6].getText()) && !buttons[2].getText().isEmpty()) {
+            gameOver = true;
+            JOptionPane.showMessageDialog(null, buttons[2].getText() + " Wins Game Over");
+          }
+        }
       }
     };
     for (JButton button : buttons) {
@@ -89,11 +106,6 @@ public class Main {
     }
     for (JButton button : buttons) {
       button.addActionListener(buttonListener);
-    }
-
-    if (b1.getText().equals(b2.getText())) {
-      System.out.println("boy");
-
     }
   }
 }
