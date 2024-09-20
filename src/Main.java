@@ -64,40 +64,44 @@ public class Main {
         }
         counter++;
 
-        if (gameOver == false) {
-          if (buttons[0].getText().equals(buttons[1].getText())
-              && buttons[1].getText().equals(buttons[2].getText()) && !buttons[0].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
-          } else if (buttons[3].getText().equals(buttons[4].getText())
-              && buttons[4].getText().equals(buttons[5].getText()) && !buttons[3].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[3].getText() + " Wins Game Over");
-          } else if (buttons[6].getText().equals(buttons[7].getText())
-              && buttons[7].getText().equals(buttons[8].getText()) && !buttons[6].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[6].getText() + " Wins Game Over");
-          } else if (buttons[0].getText().equals(buttons[3].getText())
-              && buttons[3].getText().equals(buttons[6].getText()) && !buttons[0].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
-          } else if (buttons[1].getText().equals(buttons[4].getText())
-              && buttons[4].getText().equals(buttons[7].getText()) && !buttons[1].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[1].getText() + " Wins Game Over");
-          } else if (buttons[2].getText().equals(buttons[5].getText())
-              && buttons[5].getText().equals(buttons[8].getText()) && !buttons[2].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[2].getText() + " Wins Game Over");
-          } else if (buttons[0].getText().equals(buttons[4].getText())
-              && buttons[4].getText().equals(buttons[8].getText()) && !buttons[0].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
-          } else if (buttons[2].getText().equals(buttons[4].getText())
-              && buttons[4].getText().equals(buttons[6].getText()) && !buttons[2].getText().isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(null, buttons[2].getText() + " Wins Game Over");
-          }
+        if (buttons[0].getText().equals(buttons[1].getText())
+            && buttons[1].getText().equals(buttons[2].getText()) && !buttons[0].getText().isEmpty()) {
+
+          JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
+
+        } else if (buttons[3].getText().equals(buttons[4].getText())
+            && buttons[4].getText().equals(buttons[5].getText()) && !buttons[3].getText().isEmpty()) {
+
+          JOptionPane.showMessageDialog(null, buttons[3].getText() + " Wins Game Over");
+
+        } else if (buttons[6].getText().equals(buttons[7].getText())
+            && buttons[7].getText().equals(buttons[8].getText()) && !buttons[6].getText().isEmpty()) {
+
+          JOptionPane.showMessageDialog(null, buttons[6].getText() + " Wins Game Over");
+
+        } else if (buttons[0].getText().equals(buttons[3].getText())
+            && buttons[3].getText().equals(buttons[6].getText()) && !buttons[0].getText().isEmpty()) {
+
+          JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
+
+        } else if (buttons[1].getText().equals(buttons[4].getText())
+            && buttons[4].getText().equals(buttons[7].getText()) && !buttons[1].getText().isEmpty()) {
+
+          JOptionPane.showMessageDialog(null, buttons[1].getText() + " Wins Game Over");
+
+        } else if (buttons[2].getText().equals(buttons[5].getText())
+            && buttons[5].getText().equals(buttons[8].getText()) && !buttons[2].getText().isEmpty()) {
+
+          JOptionPane.showMessageDialog(null, buttons[2].getText() + " Wins Game Over");
+
+        } else if (buttons[0].getText().equals(buttons[4].getText())
+            && buttons[4].getText().equals(buttons[8].getText()) && !buttons[0].getText().isEmpty()) {
+
+          JOptionPane.showMessageDialog(null, buttons[0].getText() + " Wins Game Over");
+
+        } else if (buttons[2].getText().equals(buttons[4].getText())
+            && buttons[4].getText().equals(buttons[6].getText()) && !buttons[2].getText().isEmpty()) {
+          JOptionPane.showMessageDialog(null, buttons[2].getText() + " Wins Game Over");
         }
       }
     };
