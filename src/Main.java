@@ -1,5 +1,7 @@
-import java.awt.*;
-
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,7 +13,7 @@ public class Main {
 
   public static void main(String[] args) {
     JFrame Frame = new JFrame();
-    Frame.setSize(800, 600);
+    Frame.setSize(300, 250);
     Frame.setVisible(true);
     Frame.setTitle("XO");
     Frame.setResizable(false);
