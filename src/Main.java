@@ -13,7 +13,7 @@ public class Main {
 
   public static void main(String[] args) {
     JFrame Frame = new JFrame();
-    Frame.setSize(300, 250);
+    Frame.setSize(350, 350);
     Frame.setVisible(true);
     Frame.setTitle("XO");
     Frame.setResizable(false);
@@ -54,8 +54,6 @@ public class Main {
 
     ActionListener buttonListener = new ActionListener() {
       int counter = 1;
-
-      boolean gameOver = false;
 
       public void actionPerformed(ActionEvent ae) {
         JButton button = (JButton) ae.getSource();
